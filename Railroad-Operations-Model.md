@@ -4,7 +4,7 @@ I think I'm on the right track here(pun fully intended). Modeling rail yard oper
 
 ---
 
-## **Railroad Operations: Key Concepts to Model**
+## **Key Concepts to Model in Railroad Operationsl**
 
 Here’s a breakdown of elements typically involved in **rail yard and dispatch systems**, which we can model in a simplified digital system:
 
