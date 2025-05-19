@@ -1,5 +1,3 @@
-Data Infrastructure
-
 Let's delve into Norfolk Southern's (NS) data infrastructure and explore how we can model a simplified version of their system.
 
 ---
