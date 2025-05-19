@@ -117,15 +117,15 @@ CRUD operations included.
 
 ---
 
-## 📦 Output Files (What Was Intended to Be Zipped)
+## 📦 Output Files
 
 * `sample-database-schemas.md`
 * Java files for all 4 entities and their CRUD layers
 * `application.properties`
 * `swagger.yaml`
 * Postman Collection JSON
-* Figma notes or exported assets (if any)
+* Figma notes and exported assets 
 
 ---
 
-And soon, I will start postingm y notes from the weekend.
+And soon, I will start posting my notes from the weekend.
