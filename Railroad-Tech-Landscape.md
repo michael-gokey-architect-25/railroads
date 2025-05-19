@@ -1,10 +1,10 @@
-Railroad tech landscape
+Railroad technical landscape
 How I might model a simplified version of their system. This and all documents in this GitHub repo are my ideas. I actually have no knowledge of thier systems, other than what you can find on the web about them, from white papers, job descriptioons and what you can find in other public open web places. None if this is from them. I am just guessing and making stuff up based onmy guesses. 
 
 
 ---
 
-### 🚂 Norfolk Southern’s Core Data Systems
+### 🚂 Norfolk Southern’s Core Data Systems and technical landscape
 
 Norfolk Southern (NS) relies heavily on a robust mainframe system known as **OWP.NSCorp**. This centralized computing platform manages massive volumes of data, processes transactions, and supports mission-critical applications. It's designed for high availability, scalability, and security, ensuring seamless coordination of freight transportation, inventory management, and customer service.
 
