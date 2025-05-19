@@ -119,7 +119,7 @@ TABLE: Route
 * **Interactive Train Builder UI**: Drag/drop cars into trains
 * **Dispatch Console**: List of trains scheduled, in motion, or delayed
 * **Car Tracking Dashboard**: Track each load from origin to destination
-* **Switching Game**: Bonus—simulate yard switching tasks like a puzzle
+* **Switching Game**: Bonus: simulate yard switching tasks like a puzzle
 
 ---
 
