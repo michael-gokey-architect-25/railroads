@@ -8,7 +8,7 @@ A place to work on my railroad model designs
 
 ## 🧠 **Table of Contents: Rail Yard Dispatch System (End-to-End Spring Boot + Angular Project)**
 
-### 🔹 **1. Sample Database Schemas for Learning**
+### 🔹 **[1. Sample Database Schemas for Learning](https://github.com/michael-gokey-architect-25/railroads/blob/main/sample-schemas.md "sample learning schemas across major database platforms")**
 
 * Summary of sample schemas from:
 
@@ -21,7 +21,9 @@ A place to work on my railroad model designs
 
 ---
 
-### 🚂 **2. Rail Yard Domain Modeling**
+### 🚂 **[2. Rail Yard Domain Modeling](https://github.com/michael-gokey-architect-25/railroads/blob/main/Railroad-Operations-Model.md "Key Concepts to Model in Railroad Operations")**
+
+
 
 * Brainstormed data elements and entities:
 
@@ -34,6 +36,9 @@ A place to work on my railroad model designs
 ---
 
 ### 💾 **3. Tech Stack & DB Strategy**
+
+- [Data Infrastructure](https://github.com/michael-gokey-architect-25/railroads/blob/main/Data-Infrastructure.md "Simplified Model Data Infrastructure Ideas")
+- [Technical Landscape](https://github.com/michael-gokey-architect-25/railroads/blob/main/Railroad-Tech-Landscape.md 'Core Data Systems and Technical Landscape')
 
 * Best DB choice for Spring Boot integration:
 
@@ -127,5 +132,9 @@ CRUD operations included.
 * Figma notes and exported assets 
 
 ---
+*This and all documents in this GitHub repo are my ideas. I have no actual knowledge of their systems, other than what you can find on the web about them, from white papers, job descriptioons and what you can find in other public open web places. None of this information is from them. I am just guessing and making stuff up based on my ideas.*
 
-And soon, I will start posting my notes from the weekend.
+
+---
+- [link words](LINK 'title')
+
