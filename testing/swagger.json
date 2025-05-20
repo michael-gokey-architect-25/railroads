@@ -1,0 +1,81 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Rail Yard Dispatch API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/yards": {
+      "get": {
+        "summary": "Get all yards",
+        "responses": {
+          "200": {
+            "description": "A list of yards"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new yard",
+        "responses": {
+          "201": {
+            "description": "Yard created"
+          }
+        }
+      }
+    },
+    "/routes": {
+      "get": {
+        "summary": "Get all routes",
+        "responses": {
+          "200": {
+            "description": "A list of routes"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new route",
+        "responses": {
+          "201": {
+            "description": "Route created"
+          }
+        }
+      }
+    },
+    "/trains": {
+      "get": {
+        "summary": "Get all trains",
+        "responses": {
+          "200": {
+            "description": "A list of trains"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new train",
+        "responses": {
+          "201": {
+            "description": "Train created"
+          }
+        }
+      }
+    },
+    "/cars": {
+      "get": {
+        "summary": "Get all cars",
+        "responses": {
+          "200": {
+            "description": "A list of cars"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new car",
+        "responses": {
+          "201": {
+            "description": "Car created"
+          }
+        }
+      }
+    }
+  }
+}

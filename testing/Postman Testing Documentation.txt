@@ -1,0 +1,207 @@
+
+
+Great — here's a starter Postman collection template **and** a sample testing documentation that goes along with it.
+
+---
+
+## **1. Postman Collection Template (JSON)**
+
+This file assumes your Spring Boot app is running at `http://localhost:8080`, but you can easily change the `{{base_url}}` variable in Postman later.
+
+**Postman JSON Collection Template:**
+
+```json
+{
+  "info": {
+    "name": "Rail Yard Dispatch System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080"
+    }
+  ],
+  "item": [
+    {
+      "name": "Get All Trains",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{base_url}}/trains", "host": ["{{base_url}}"], "path": ["trains"] }
+      },
+      "event": [{
+        "listen": "test",
+        "script": {
+          "exec": [
+            "pm.test(\"Status is 200\", () => pm.response.code === 200);",
+            "pm.test(\"Response has an array\", () => Array.isArray(pm.response.json()));"
+          ]
+        }
+      }]
+    },
+    {
+      "name": "Create Train",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"name\": \"Freight 101\",\n  \"status\": \"READY\"\n}" },
+        "url": { "raw": "{{base_url}}/trains", "host": ["{{base_url}}"], "path": ["trains"] }
+      },
+      "event": [{
+        "listen": "test",
+        "script": {
+          "exec": [
+            "pm.test(\"Train created\", () => pm.response.code === 201);",
+            "pm.test(\"Has ID\", () => pm.response.json().id !== undefined);"
+          ]
+        }
+      }]
+    },
+    {
+      "name": "Get All Yards",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{base_url}}/yards", "host": ["{{base_url}}"], "path": ["yards"] }
+      }
+    },
+    {
+      "name": "Create Yard",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"North Yard\",\n  \"location\": \"Norfolk, VA\"\n}"
+        },
+        "url": { "raw": "{{base_url}}/yards", "host": ["{{base_url}}"], "path": ["yards"] }
+      }
+    },
+    {
+      "name": "Get All Routes",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{base_url}}/routes", "host": ["{{base_url}}"], "path": ["routes"] }
+      }
+    },
+    {
+      "name": "Create Route",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"origin\": \"Norfolk\",\n  \"destination\": \"Chicago\",\n  \"distance\": 850\n}"
+        },
+        "url": { "raw": "{{base_url}}/routes", "host": ["{{base_url}}"], "path": ["routes"] }
+      }
+    },
+    {
+      "name": "Get All Cars",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{base_url}}/cars", "host": ["{{base_url}}"], "path": ["cars"] }
+      }
+    },
+    {
+      "name": "Create Car",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"type\": \"Boxcar\",\n  \"capacity\": 100,\n  \"status\": \"LOADED\"\n}"
+        },
+        "url": { "raw": "{{base_url}}/cars", "host": ["{{base_url}}"], "path": ["cars"] }
+      }
+    }
+  ]
+}
+
+```
+
+
+
+---
+
+## **2. Sample Postman Testing Documentation**
+
+Here’s a simple markdown-style documentation you can include in your project’s README or Confluence/Wiki.
+
+---
+
+### **Postman Testing Guide for Rail Yard Dispatch System**
+
+**Base URL:** `http://localhost:8080`
+*(Change this to your deployed backend server if needed)*
+
+#### **Environment Setup**
+
+1. Import the provided Postman collection.
+2. Create a new environment in Postman.
+3. Add a variable:
+
+   * `base_url` → `http://localhost:8080`
+
+#### **Endpoints and Test Cases**
+
+
+| Resource | Endpoint  | Method | Description        | Tests                |
+| -------- | --------- | ------ | ------------------ | -------------------- |
+| Trains   | `/trains` | `GET`  | List all trains    | 200 OK + Array check |
+| Trains   | `/trains` | `POST` | Create a new train | 201 Created + has ID |
+| Yards    | `/yards`  | `GET`  | List all yards     | 200 OK               |
+| Yards    | `/yards`  | `POST` | Create a new yard  | 201 Created          |
+| Routes   | `/routes` | `GET`  | List all routes    | 200 OK               |
+| Routes   | `/routes` | `POST` | Create a new route | 201 Created          |
+| Cars     | `/cars`   | `GET`  | List all cars      | 200 OK               |
+| Cars     | `/cars`   | `POST` | Create a new car   | 201 Created          |
+
+
+
+#### **Example Data**
+
+**POST /trains**
+
+```json
+{
+  "name": "Freight 101",
+  "status": "READY"
+}
+```
+
+**POST /yards**
+
+```json
+{
+  "name": "North Yard",
+  "location": "Norfolk, VA"
+}
+```
+**POST /routes**
+
+```json
+{
+  "origin": "Norfolk",
+  "destination": "Chicago",
+  "distance": 850
+}
+
+```
+
+**POST /cars**
+
+```json
+{
+  "type": "Boxcar",
+  "capacity": 100,
+  "status": "LOADED"
+}
+
+```
+
+
+---
+Next Steps:
+
+=============================
+

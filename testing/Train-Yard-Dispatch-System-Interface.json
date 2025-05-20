@@ -1,0 +1,23 @@
+
+{
+  "yards": ["A-Yard", "B-Yard", "C-Yard"],
+  "routes": [
+    {"routeId": "East", "location": "East"},
+    {"routeId": "West", "location": "West"},
+    {"routeId": "North", "location": "North"}
+  ],
+  "trains": [
+    {"trainId": "1001", "status": "Assembling", "destination": "West", "yard": "AYard"},
+    {"trainId": "1002", "status": "Departed", "destination": "West", "yard": "AYard"},
+    {"trainId": "1003", "status": "Arrived", "destination": "North", "yard": "B Yard"},
+    {"trainId": "1004", "status": "Departed", "destination": "North", "yard": "C Yard"},
+    {"trainId": "1005", "status": "Scheduled", "destination": "West", "yard": "B Yard"}
+  ],
+  "cars": [
+    {"carId": "C1", "type": "Boxcar", "product": "Food"},
+    {"carId": "C2", "type": "Tank", "product": "Products"},
+    {"carId": "C3", "type": "Hopper"},
+    {"carId": "C4", "type": "Flatcar"},
+    {"carId": "C5", "type": "Boxcar"}
+  ]
+}
