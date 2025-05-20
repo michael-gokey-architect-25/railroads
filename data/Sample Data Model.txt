@@ -1,0 +1,36 @@
+
+TABLE: Train
+- train_id (PK)
+- name
+- status
+- engine_id (FK)
+- length
+- weight
+
+TABLE: Car
+- car_id (PK)
+- type
+- load_type
+- train_id (FK)
+- origin
+- destination
+- status
+
+TABLE: Yard
+- yard_id (PK)
+- name
+- location
+- capacity
+
+TABLE: Schedule
+- schedule_id (PK)
+- train_id (FK)
+- route_id (FK)
+- depart_time
+- arrival_time
+
+TABLE: Route
+- route_id (PK)
+- origin
+- destination
+- total_distance

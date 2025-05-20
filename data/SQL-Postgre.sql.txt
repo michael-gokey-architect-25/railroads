@@ -1,0 +1,37 @@
+
+-- Yards table
+CREATE TABLE yards (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) UNIQUE NOT NULL
+);
+
+-- Routes table
+CREATE TABLE routes (
+    id SERIAL PRIMARY KEY,
+    route_id VARCHAR(20) NOT NULL,
+    location VARCHAR(50) NOT NULL
+);
+
+-- Trains table
+CREATE TABLE trains (
+    id SERIAL PRIMARY KEY,
+    train_id VARCHAR(10) UNIQUE NOT NULL,
+    status VARCHAR(30) NOT NULL,
+    destination VARCHAR(50),
+    yard_id INTEGER REFERENCES yards(id)
+);
+
+-- Cars table
+CREATE TABLE cars (
+    id SERIAL PRIMARY KEY,
+    car_id VARCHAR(10) UNIQUE NOT NULL,
+    type VARCHAR(30) NOT NULL,
+    product VARCHAR(100)
+);
+
+-- Junction table for train-car assignments (many-to-many)
+CREATE TABLE train_cars (
+    train_id INTEGER REFERENCES trains(id) ON DELETE CASCADE,
+    car_id INTEGER REFERENCES cars(id) ON DELETE CASCADE,
+    PRIMARY KEY (train_id, car_id)
+);
